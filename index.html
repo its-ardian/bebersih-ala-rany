@@ -98,13 +98,13 @@ nav.tabbar button.active{background:var(--tan); color:#fff;}
   <header>
     <p class="eyebrow">Tips &amp; Trik</p>
     <h1>Bebersih ala Kak Rany</h1>
-    <div class="searchwrap">
+    <div class="searchwrap" id="searchwrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="#4a3c26" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
       <input id="search" type="search" placeholder="Cari masalah, misal: kerak, karat, jamur...">
     </div>
   </header>
 
-  <div class="filterbar">
+  <div class="filterbar" id="filterbar">
     <select id="catSelect"></select>
   </div>
 
@@ -204,6 +204,9 @@ document.querySelectorAll('nav.tabbar button').forEach(btn=>{
     btn.classList.add('active');
     Object.values(views).forEach(v=>document.getElementById(v).classList.add('hidden'));
     document.getElementById(views[btn.dataset.view]).classList.remove('hidden');
+    const isTips = btn.dataset.view === 'tips';
+    document.getElementById('searchwrap').classList.toggle('hidden', !isTips);
+    document.getElementById('filterbar').classList.toggle('hidden', !isTips);
     window.scrollTo(0,0);
   });
 });
