@@ -1,0 +1,1 @@
+Seluruh tips & trik bebersih dirangkum dari konten Kak @rany_soetanto oleh @neifa.mamanana (dulu @menuang_keluh). Hak cipta konten asli tetap milik pembuatnya — situs ini hanya alat bantu pencarian pribadi.
